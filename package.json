@@ -1,0 +1,24 @@
+{
+  "name": "todo-app-vanilla-js",
+  "version": "1.0.0",
+  "description": "A simple plain JavaScript and Node.js Todo App",
+  "main": "/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon server.js",
+    "start": "node server.js",
+    "lint": "eslint ."
+  },
+  "author": "Tina Bisgaard",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  }
+}

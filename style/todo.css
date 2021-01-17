@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+body {
+  background: #e0e1dd;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+.app,
+.header,
+select,
+.list__container,
+.list__todo,
+.list__completed {
+  width: 100%;
+}
+
+.app,
+.form__input,
+.form__button,
+select,
+.todo__text,
+.complete__btn,
+.delete__btn {
+  height: 100%;
+}
+
+.form,
+.list__todo__header,
+.list__completed__header {
+  width: 90%;
+  height: 50px;
+}
+
+.app,
+.header,
+.form,
+.list__container,
+.list__todo,
+.list__completed {
+  display: flex;
+  align-items: center;
+}
+
+.form,
+.select__container,
+.todo {
+  background: white;
+}
+
+.app {
+  flex-direction: column;
+  min-width: 260px;
+}
+
+.header {
+  justify-content: center;
+  margin-bottom: 25px;
+  height: 75px;
+  text-align: center;
+  border-bottom: 1px dashed white;
+  color: #1b263b;
+  background: #e0e1dd;
+}
+
+.form {
+  border: 0.5px solid lightgray;
+}
+
+.form__input {
+  flex: 1;
+}
+
+.form__input,
+.form__button {
+  padding: 0px 10px;
+  font-size: 16px;
+}
+
+.form__input::placeholder {
+  color: black;
+}
+
+.form__button {
+  width: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form__button:hover {
+  background: #1b263b;
+  color: white;
+}
+
+.select__container {
+  width: 60%;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  margin: 25px 0px 25px 0px;
+  border-radius: 5px;
+  border: 0.5px solid lightgray;
+}
+
+.select__container:after {
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  font-size: 24px;
+  content: '\f107';
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  animation: transitionSelect 0.3s ease;
+}
+
+@keyframes transitionSelect {
+  0% {
+    background: #1b263b;
+    color: white;
+  }
+  100% {
+    background: white;
+    color: black;
+  }
+}
+
+.select__container:hover:after {
+  background: #1b263b;
+  color: white;
+  animation: transitionSelectHover 0.3s ease;
+}
+
+@keyframes transitionSelectHover {
+  0% {
+    background: white;
+    color: black;
+  }
+  100% {
+    background: #1b263b;
+    color: white;
+  }
+}
+
+select {
+  padding: 0px 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.list__container {
+  flex-direction: column;
+  text-align: center;
+}
+
+.list__todo,
+.list__completed {
+  flex-direction: column;
+  transition: all 1s ease;
+}
+
+.list__todo__header,
+.list__completed__header {
+  line-height: 50px;
+  font-weight: normal;
+  font-size: 22px;
+  background: #1b263b;
+  border-top: 0.5px solid lightgray;
+  position: relative;
+}
+
+.list__todo__header {
+  color: white;
+}
+
+.list__completed__header {
+  color: #e0e1dd;
+}
+
+.list__footer {
+  width: 90%;
+  border-bottom: 0.5px solid lightgray;
+  border-bottom: 1.5px dotted white;
+  margin-top: -1px;
+}
+
+.list__completed {
+  margin-top: 25px;
+}
+
+.todo {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: 16px;
+  border: 0.5px solid lightgray;
+}
+
+.todo--completed {
+  background: repeating-linear-gradient(
+    45deg,
+    white,
+    white 10px,
+    #e0e1dd 10px,
+    #e0e1dd 15px
+  );
+}
+
+.todo__text {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  padding: 5px 0px 10px 10px;
+  min-height: 50px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.todo__text--completed {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.complete__btn,
+.delete__btn {
+  width: 50px;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.complete__btn {
+  color: green;
+}
+
+.complete__btn--completed {
+  border-radius: 0;
+}
+
+.delete__btn {
+  color: #cb4335;
+}
+
+.complete__btn:hover,
+.delete__btn:hover {
+  font-size: 26px;
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header {
+    width: 760px;
+  }
+
+  .select__container {
+    width: 499px;
+  }
+
+  .form,
+  .list__todo__header,
+  .list__completed__header,
+  .todo,
+  .list__footer {
+    width: 730px;
+  }
+}

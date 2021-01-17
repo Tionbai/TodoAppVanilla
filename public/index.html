@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" type="text/css" href=".././style/todo.css" />
+    <script type="text/javascript" defer src=".././js/todo.js"></script>
+    <script
+      src="https://kit.fontawesome.com/4e5f93160a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>Todo App</h1>
+      </header>
+
+      <form class="form">
+        <input
+          type="text"
+          id="form__input"
+          class="form__input"
+          placeholder="Add todo"
+        />
+        <button
+          type="submit"
+          id="form__button"
+          class="form__button fas fa-angle-right"
+        ></button>
+      </form>
+
+      <form type="submit" class="select__container">
+        <select name="todos" id="select__todos" class="select__todos">
+          <option value="all">All</option>
+          <option value="uncompleted">Uncompleted</option>
+          <option value="completed">Completed</option>
+        </select>
+      </form>
+
+      <section id="list__container" class="list__container">
+        <ul id="list__todo" class="list__todo">
+          <h2 class="list__todo__header">Todos</h2>
+          <footer class="list__footer"></footer>
+        </ul>
+        <ul id="list__completed" class="list__completed">
+          <h2 class="list__completed__header">Completed</h2>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
